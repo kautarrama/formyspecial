@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hai</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <audio id="bgm" controls autoplay hidden>
+      <source src="/assets/audio/Nadin Amizah Semua Aku Dirayakan.mp3" />
+    </audio>
+
+    <section class="parallax">
+      <h1>
+        Selamat Milad <br />
+        Putriii (^.^)
+      </h1>
+
+      <div class="front-layer">
+        <img src="/assets/images/8.jpg" alt="" />
+        <img src="/assets/images/7.jpg" alt="" />
+        <img src="/assets/images/2.jpg" alt="" />
+      </div>
+
+      <div class="back-layer">
+        <img src="/assets/images/1.jpg" alt="" />
+        <img src="/assets/images/4.jpg" alt="" />
+        <img src="/assets/images/5.jpg" alt="" />
+      </div>
+    </section>
+
+    <script type="text/javascript">
+      window.addEventListener("load", () => {
+        const parallax = document.querySelector(".parallax");
+        const front = document.querySelector(".front-layer");
+        const back = document.querySelector(".back-layer");
+        const bgm = document.querySelector("#bgm");
+
+        parallax.style.display = "block";
+        bgm.autopay;
+
+        const sfront = 150;
+        const sBack = 400;
+
+        parallax.addEventListener("mousemove", (e) => {
+          const x = e.clientX;
+          const y = e.clientY;
+
+          front.style.transform = `translate(${x / sfront}%, ${y / sfront}%)`;
+          back.style.transform = `translate(${x / sBack}%, ${y / sBack}%)`;
+        });
+      });
+    </script>
+  </body>
+</html>
